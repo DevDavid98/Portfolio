@@ -1,0 +1,129 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <section class="navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{{url_for('index')}}">David Garcia</a>
+              <button class="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Projects
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#project1">Project 1</a></li>
+                      <li><a class="dropdown-item" href="#project2">Project 2</a></li>
+                      <li><a class="dropdown-item" href="#project3">Project 3</a></li>
+                      <li><a class="dropdown-item" href="#project4">Project 4</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('add_project')}}">Add Project</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </section>
+    <section class="header">
+        <h1>Python Developer</h1>
+        <p>Self motivated and determined to be the best devleoper I can be.</p>
+        <img src="static/me.jpeg" alt="Headshot of myself">
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            My name is David Garcia. 
+            I come from background of successfull bluecoller business owners that are in my family.
+            I am stiving to do better, when I gather enough experience in python devlopment
+            and to be the first person in my family to be in this field of work and study.
+            I constantly push my self to teach my self new skills and
+            abilities when it comes to computer programming.
+            I currently have a certificate in CIS (Computer information Systems) and soon to have a certification in python web devlopment.
+        </p>
+        <div id="triangle1"></div>
+        <div id="triangle2"></div>
+    </section>
+    <section id="skills">
+        <i class="fas fa-laptop-code"></i>
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>SQLAlchemy</li>
+            <li>GitHub</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </section>
+
+
+    <section id="projects">
+
+      <div id="triangle3"></div>
+      <i class="fas fa-file-code"></i>
+      <h2>Projects</h2>
+      
+      {% for project in projects %}
+      
+        <div id="project-list">
+        <div id="project1" class="a-project">
+          
+        <a href="{{url_for('project', id = project.id)}}"><h3>{{project.title}}</h3></a>
+          
+        <a href="{{project.link}}" target = "_blank" class="github-btn">
+          <i class="fab fa-github"></i>
+            View on GitHub
+        </a>
+        <p>
+          {{project.description}}
+        </p>
+          
+        <p>
+          Skills: {{project.skills}}
+        </p>
+
+        
+          
+        </div>   
+        </div>
+      
+        <div id="triangle4"></div>
+      
+      {% endfor %}
+      
+    </section>
+
+
+    <section id="contact">
+        <i class="fas fa-paper-plane"></i>
+        <h2>Contact Me</h2>
+        <p>
+            The best way to conatact me is through email and text.
+        </p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            devdavidg98@gmail.com
+        </p>
+        <p>
+            <i class="fas fa-phone"></i>
+            (325)340-6465
+        </p>
+    </section>
+{% endblock %}
