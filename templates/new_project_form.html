@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <section class="navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Student Name</a>
+                <button class="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#project1">Project 1</a></li>
+                            <li><a class="dropdown-item" href="#project2">Project 2</a></li>
+                            <li><a class="dropdown-item" href="#project3">Project 3</a></li>
+                            <li><a class="dropdown-item" href="#project4">Project 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('add_project')}}">Add Project</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="header">
+        <h1>New Project</h1>
+    </section>
+    <section id="form">
+        <form action="{{url_for('add_project')}}" method = "POST">
+            <label for="title">Project Title</label>
+            <input type="text" name="title" id="title" placeholder="Project Name" required>
+            
+            
+            <label for="date">Completion Date</label>
+            <input type="month" name="date" id="date" required>
+            
+            
+            <label for="description">Description</label>
+            <textarea name="desc" id="description" cols="30" rows="20" placeholder="Description" required></textarea>
+            
+            
+            <label for="skills-list" id="skills-label">Skills</label>
+            <p>Separate each skill by a comma</p>
+            <textarea name="skills" id="skills-list" cols="30" rows="10" placeholder="Skill, Skill" required></textarea>
+            
+            
+            <label for="github">GitHub Link</label>
+            <input type="url" name="github" id="github" placeholder="Link to the repo" required>
+            
+            
+            <div>
+                <button type="reset">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+{% endblock %}
