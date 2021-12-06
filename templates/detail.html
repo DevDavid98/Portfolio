@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <section class="navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{url_for('index')}}">David Garcia</a>
+                <button class="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#project1">Project 1</a></li>
+                            <li><a class="dropdown-item" href="#project2">Project 2</a></li>
+                            <li><a class="dropdown-item" href="#project3">Project 3</a></li>
+                            <li><a class="dropdown-item" href="#project4">Project 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('add_project')}}">Add Project</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="header">
+        <h1>{{project.title}}</h1>
+        <p>{{project.completed}}</p>
+        <a href="{{project.link}}" class="github-btn" target = '_blank'>
+            <i class="fab fa-github"></i>
+            View on GitHub
+        </a>
+        <ul class="project-skills">
+            <div>
+                {%for item in project_skills%}
+                <li>
+                    {{item}}
+                </li>
+                {% endfor %}
+            </div>
+        </ul>
+    </section>
+    <section id="project-desc">
+        <div id="triangle5"></div>
+        <h2>Description</h2>
+        <p>
+            {{project.description}}
+        </p>
+        <div id="triangle6"></div>
+    </section>
+    <section id="edit-delete">
+        <a href="{{url_for('edit', id = project.id)}}">
+            <i class="fas fa-edit"></i>
+            Edit
+        </a>
+        <a href="{{url_for('delete', id = project.id)}}">
+            <i class="far fa-trash-alt"></i>
+            Delete
+        </a>
+    </section>
+{% endblock %}
