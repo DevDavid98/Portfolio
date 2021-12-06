@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio</title>
+        <meta name="description" content="A portfolio of my work">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+    <footer>
+        <section class="footer">
+            <div class="socials">
+                <!--Delete any you don't use-->
+                <!--Icons from FontAwesome.com/icons-->
+                <a href="https://github.com/OXDavidXO" target = '_blank' >
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/david-garcia-988642220/" target = '_blank' >
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="treehouse">
+                <p>
+                    Front-End Designed by 
+                    <a href="https://teamtreehouse.com" target = '_blank'>
+                        Treehouse
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.75 249.54"><defs><style>.cls-1{fill:#fff;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M202.68,45.53c-8.27-4.67-21.47,2.85-29.49,16.8L158.67,87.59a31.83,31.83,0,0,0,2.15,32.65l.42.61C168,130.5,177,139.42,180,142.61a16.49,16.49,0,1,1-27.92,15.7,16.27,16.27,0,0,1-.48-6.55c.47-3.62-.69-9.53-5.89-15.32s-15.81,5.15-19.24,16.4l-.16.52c-3.43,11.25-5.6,21.07-5,22a19.33,19.33,0,0,1,1.07,1.77,18.58,18.58,0,1,1-25.13-7.69c.4-.22.81-.41,1.23-.6.69-.3,2.66-5,4.36-10.62s2.44-7.55,3.09-10.12c.87-3.44,2.15-10.59,1.51-14.13-.7-3.93-4.75-4.21-9-1.19-2.54,1.81-6.74,5.39-8.79,6.86-3.85,2.75-7.07,8.1-8.78,11.38a16.37,16.37,0,1,1-18-23.57c4.12-.9,18.15-9.47,26.61-15.52a30.89,30.89,0,0,0,4.92-4c2.53-3.23-.19-5.79-2.64-5.52-7.2.8-14.61,1.82-16,3.6A14.65,14.65,0,1,1,55.74,85.1a14.54,14.54,0,0,1,8.95-2.75c5.26.14,19.11,3,30.69.9l3-.53c11.58-2,25.45-12.13,31-22.52L141.42,39c6.68-11.73,6.19-24.57-1.1-28.69L127.14,2.83c-6.66-3.77-17.55-3.77-24.21,0L12.11,54C5.45,57.77,0,67.09,0,74.74V174.8c0,7.64,5.45,17,12.11,20.72l90.82,51.2c6.66,3.76,17.55,3.75,24.21,0l90.51-51.18c6.66-3.76,12.1-13.09,12.1-20.73V74.74c0-7.65-5.44-17-12.1-20.74Z"/></g></g></svg>
+                    </a>
+                </p>
+            </div>
+        </section>
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </footer>
+</html>
