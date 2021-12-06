@@ -1,0 +1,682 @@
+/*******
+Colors
+*******/
+:root {
+    --primary-text: #51475c;
+    --secondary-text: #ab6c82;
+    --primary: #475c7a;
+    --secondary: #fcbb6d;
+    --accent: #d8737f;
+    --white:  #fff;
+}
+
+/*******
+FONT
+*******/
+
+* {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: var(--primary-text);
+}
+
+p, 
+li, 
+a {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*******
+Nav
+*******/
+
+nav {
+    margin-top: 1rem;
+}
+
+.navbar-brand {
+    color: var(--primary-text);
+    font-size: 20px;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: var(--primary-text);
+}
+
+.nav-item a {
+    color: var(--primary-text);
+    font-size: 20px;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+    color: var(--white);
+    background-color: var(--accent);
+    padding-left: 10px;
+}
+
+.toggle {
+    color: var(--primary-text);
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+/******************
+Header  - Homepage
+******************/
+
+.header {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 20px;
+    color: var(--secondary-text);
+}
+
+.header img {
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 6rem;
+    margin-top: 4rem;
+}
+
+/***************
+Header - Detail
+***************/
+
+.header .github-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.header .project-skills {
+    list-style: none;
+    text-align: left;
+    margin: auto;
+    line-height: 40px;
+    max-width: 250px;
+    margin-bottom: 4rem;
+}
+
+.header .project-skills li {
+    position: relative;
+}
+
+.header  .project-skills li::before {
+    content: '\FE61';
+    position: absolute;
+    left: -20px;
+}
+
+/*******
+About
+*******/
+
+#about {
+    text-align: center;
+    background-color: var(--primary);
+    padding: 5%;
+    position: relative;
+}
+
+#triangle1 {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 50px solid var(--primary);
+    border-bottom: 50px solid transparent;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+#triangle2 {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid var(--primary);
+    position: absolute;
+    bottom: -100px;
+    left: 5px;
+}
+
+#about  h2, 
+#about p {
+    color: var(--white);
+    margin: auto;
+}
+
+#about h2 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#about p {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+/*******
+Skills
+*******/
+
+#skills {
+    margin-top: 7rem;
+    text-align: center;
+}
+
+#skills .fas {
+    color: var(--accent);
+    font-size: 34px;
+    margin-bottom: 2rem;
+}
+
+#skills h2 {
+    margin-bottom: 3rem;
+}
+
+#skills ul {
+    padding: 0%;
+    margin-bottom: 6rem;
+}
+
+#skills li {
+    list-style-type: none;
+    line-height: 50px;
+}
+
+/*******
+Projects
+*******/
+
+#projects {
+    background-color: var(--secondary);
+    position: relative;
+    text-align: center;
+    padding: 5%;
+}
+
+#triangle3 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 75px solid var(--white);
+    border-left: 75px solid transparent;
+    right: 0;
+    top: 0;
+}
+
+#projects .fas {
+    font-size: 34px;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    color: var(--accent);
+}
+
+#projects .a-project {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#projects .a-project h3 {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.github-btn {
+    border-radius: 10px;
+    background-color: var(--primary);
+    padding: 8px 15px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.github-btn i {
+    color: var(--white);
+}
+
+#projects .a-project p {
+    margin-top: 2rem;
+}
+
+#projects #triangle4 {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid var(--secondary);
+    border-bottom: 50px solid transparent;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    transform: rotate(15deg);
+    overflow: hidden;
+}
+
+/*******
+Contact
+*******/
+
+#contact {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+#contact .fa-paper-plane {
+    font-size: 34px;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    color: var(--accent);
+}
+
+#contact  h2 {
+    margin-bottom: 2rem;
+}
+
+#contact p {
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2rem;
+}
+
+#contact p  i {
+    margin-right: 15px;
+}
+
+/*******
+Footer
+*******/
+
+.footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.footer  i,
+.footer p,
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer .socials  {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer .socials i {
+    font-size: 30px;
+    padding: 0  10px;
+}
+
+.footer svg {
+    height: 20px;
+    width: 20px;
+}
+
+/********************
+Description - Detail
+********************/
+
+#project-desc  {
+    background-color: var(--secondary);
+    position: relative;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+#triangle5 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid var(--secondary);
+    position: absolute;
+    top: -75px;
+    left: -65px;
+}
+
+#project-desc h2 {
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#project-desc p {
+    text-align: left;
+    padding-bottom: 4rem;
+}
+
+#triangle6 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid var(--secondary);
+    position: absolute;
+    bottom: -75px;
+    right: -65px;
+}
+
+/********************
+Buttons - Detail
+********************/
+
+#edit-delete {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+#edit-delete a {
+    background-color: var(--accent);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 13px 35px;
+    text-decoration: none;
+}
+
+#edit-delete a:first-of-type  {
+    margin-right: 20px;
+}
+
+#edit-delete a i {
+    color: var(--white);
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+/*******
+Form
+*******/
+
+#form {
+    width: fit-content;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#form input,
+#form textarea {
+    border: none;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: var(--secondary-text);
+    width: 300px;
+    height: 72px;
+    display: block;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 2rem;
+}
+
+#form input[type='month'] {
+    width: 250px;
+}
+
+#form textarea {
+    padding-top: 10px;
+    height: 200px;
+}
+
+#form label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#form #skills-label {
+    margin-bottom: 0px;
+}
+
+#form p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+#form div {
+    text-align: center;
+}
+
+#form button {
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 9px 40px;
+}
+
+#form button[type='reset'] {
+    margin-right: 10px;
+    background-color: var(--white);
+}
+
+#form button[type='submit'] {
+    background-color: var(--secondary);
+}
+
+/********************
+EXCEEDS - About Page
+********************/
+
+#about-page {
+    background-color: var(--secondary);
+    position: relative;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+#about-page #triangle7,
+#about-page #triangle8 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid var(--secondary);
+    position: absolute;
+    top: -75px;
+}
+
+#about-page #triangle7 {
+    right: -50px;
+}
+
+#about-page #triangle8 {
+    right: 0px;
+}
+
+#about-page h2 {
+    margin-bottom: 4rem;
+}
+
+#about-page p {
+    margin-top: 2rem;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+#about-page a {
+    background-color: var(--accent);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 9px 40px;
+}
+
+#about-page a i {
+    color: var(--white);
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+/*******
+Media Queries
+*******/
+
+@media (min-width: 992px){
+    h2 {
+        font-size: 62px;
+    }
+
+    .header h1 {
+        font-size: 64px;
+        margin-bottom: 2rem;
+    }
+
+    .header img {
+        height: 320px;
+        width: 320px;
+    }
+
+    .navigation {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .navigation .navbar-brand {
+        margin-right: 5rem;
+        font-size: 34px;
+    }
+
+    .navigation button {
+        display: none;
+    }
+
+    .navigation .nav-item {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #about,
+    #projects,
+    #contact,
+    #about-page {
+        padding: 5% 15%;
+    }
+
+    #about p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #skills .fas,
+    #projects .fa-file-code,
+    #contact .fa-paper-plane {
+        font-size: 100px;
+        margin-bottom: 4rem;
+    }
+
+    #skills .fas {
+        margin-bottom: 6rem;
+    }
+
+    #skills ul {
+        -webkit-column-count: 2;  /* Chrome/Opera, Safari */
+        -moz-column-count: 2; /* Mozilla Firefox */
+        column-count: 2;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #contact {
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+    }
+
+    #contact h2 {
+        margin-bottom: 5rem;
+    }
+
+    .footer .socials i {
+        padding: 0  20px;
+    }
+
+    #project-desc  {
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+
+    #form input,
+    #form textarea  {
+        width: 450px;
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 1200px){
+    .navigation .nav-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #skills li {
+        font-size: 28px;
+        line-height: 80px;
+    }
+
+    #projects h2 {
+        margin-bottom: 6rem;
+    }
+
+    #projects .a-project {
+        margin-bottom: 6rem;
+    }
+
+    .header .project-skills {
+        -webkit-column-count: 2;  /* Chrome/Opera, Safari */
+        -moz-column-count: 2; /* Mozilla Firefox */
+        column-count: 2;
+        max-width: 500px;
+    }
+
+    #edit-delete a:first-of-type  {
+        margin-right: 200px;
+    }
+
+    #form input,
+    #form textarea {
+        width: 530px;
+    }
+}
