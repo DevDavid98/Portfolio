@@ -1,1 +1,1 @@
-# Portfolio
+A portfolio web application. The application lets the user add or edit project information. When adding or editing a project, the application prompts the user for title, date, skills, description, and a link to a repo. The results for these entries are stored in a database and displayed on the homepage.
