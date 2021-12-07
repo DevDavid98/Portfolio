@@ -8,10 +8,18 @@ db = SQLAlchemy(app)
 
 
 class Projects(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    date_added = db.Column('Dated Added', db.DateTime, default = datetime.datetime.now)
+
+    id = db.Column(db.Integer, primary_key=True)
+
+    date_added = db.Column('Dated Added', db.DateTime,
+                           default=datetime.datetime.now)
+
     title = db.Column('Project Name', db.String())
+
     completed = db.Column('Completion Date', db.String())
+
     description = db.Column('Decription', db.Text())
+
     skills = db.Column('Skills', db.Text())
+
     link = db.Column('Project Link', db.Text())
