@@ -3,76 +3,64 @@
     <section class="navigation">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Student Name</a>
-              <button class="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Projects
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#project1">Project 1</a></li>
-                      <li><a class="dropdown-item" href="#project2">Project 2</a></li>
-                      <li><a class="dropdown-item" href="#project3">Project 3</a></li>
-                      <li><a class="dropdown-item" href="#project4">Project 4</a></li>
+                <a class="navbar-brand" >David Garcia</a>
+                <button class="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('about')}}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('index')}}#skills">Skills</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                            </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for project in projects %}
+                                <li><a class="dropdown-item" href="{{url_for('project', id = project.id)}}">Project {{project.id}}</a></li>
+                            {% endfor %}
+                        </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('index')}}#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('add')}}">Add Project</a>
+                        </li>
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Add Project</a>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </div>
         </nav>
     </section>
     <section class="header">
-        <h1>Your Name</h1>
-        <p>Your current goal. (Job, freelance, etc)</p>
+        <h1>David Garcia</h1>
+        <p>My current goal is to get a career with the skills I have</p>
         <!--I would suggest choosing a different picture here.-->
         <!--Like maybe a hobby photo-->
-        <img src="https://cdn.pixabay.com/photo/2020/09/04/12/32/kayak-5543935_1280.jpg" alt="Headshot of myself">
+        <img src="static/me.jpeg" alt="Headshot of myself">
     </section>
     <section id="about-page">
         <div id="triangle7"></div>
         <div id="triangle8"></div>
-        <h2>Section Title</h2>
+        <h2>About me and my hobbies</h2>
         <p>
-            Soufflé cupcake cupcake. 
-            Brownie chocolate cake gingerbread candy carrot cake sesame snaps cookie cake. 
-            Bear claw pastry candy canes tart cookie caramels cotton candy caramels sweet roll. 
-            Bonbon tootsie roll gummi bears sugar plum pie croissant. 
-            Muffin sweet roll bonbon. 
-            Carrot cake gummies cheesecake. 
-            Gummi bears powder apple pie. 
-            Topping cake powder. 
-            Pastry chupa chups caramels.
+            Hello, my name is David Garcia. I am interested in creation via computer programming. My current goal is to become the best
+            I can be in the field of programming and prove my self worth of that postion.
+            I am innovative and creative I have the fire in my heart to create applications and games with my skills
+            as well as help solutions in everyday life for the people.   
         </p>
         <p>
-            Soufflé cupcake cupcake. 
-            Brownie chocolate cake gingerbread candy carrot cake sesame snaps cookie cake. 
-            Bear claw pastry candy canes tart cookie caramels cotton candy caramels sweet roll. 
-            Bonbon tootsie roll gummi bears sugar plum pie croissant. 
-            Muffin sweet roll bonbon. 
-            Carrot cake gummies cheesecake. 
-            Gummi bears powder apple pie. 
-            Topping cake powder. 
-            Pastry chupa chups caramels.
+            I am a laid back person that loves to joke around play video games, listen to music and play guitar.
+            I am a person that is reserved until it is time to speak. Games are my main passion and would love to create my own soon as I feel ready which is real soon.
+            I love to build computers and dabble with Inforamtion Technology. 
         </p>
-        <a href="#"><i class="far fa-file"></i>Resume</a>
+        <a href="https://docs.google.com/document/d/1kxYl9GfRfup75KQz8ON11Zq_91Dg2_qZ/edit?usp=sharing&ouid=109863094589866675693&rtpof=true&sd=true" target = '_blank'><i class="far fa-file"></i>Resume</a>
     </section>
 {% endblock %}
